@@ -33,7 +33,7 @@
             <div class="contact-form">
                 <h2>Send a Message</h2>
                 <!-- Using Formspree for email handling -->
-                <form action="https://formspree.io/f/xdakebwg" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/xdakebwg" method="POST">
                     <input type="hidden" name="_next" value="thank-you.html">
                     <input type="hidden" name="_subject" value="New message from portfolio site">
 
@@ -62,13 +62,12 @@
     </div>
 
 <script>
-    // Reset the contact form when the page loads
-    window.addEventListener('load', function() {
-        const form = document.querySelector('.contact-form form');
+    // Reset the form when page loads or is restored from cache (Back button)
+    window.addEventListener('pageshow', function(event) {
+        const form = document.getElementById('contactForm');
         if (form) form.reset();
     });
 </script>
-
 
 </body>
 </html>
