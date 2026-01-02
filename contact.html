@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me - Fadzai Chitsinde</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Email: <a href="mailto:chitsindefad@gmail.com">chitsindefad@gmail.com</a></p>
+                <p>Phone: <a href="tel:+48793188492">+48 793 188 492</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/fadzai-chitsinde-569631359/" target="_blank">LinkedIn</a></p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+                <!-- Using Formspree for email handling -->
+                <form action="https://formspree.io/f/xdakebwg" method="POST">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_subject" value="New message from portfolio site">
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Bar -->
+    <div class="floating-contact">
+        <p>
+            Email: <a href="mailto:chitsindefad@gmail.com">chitsindefad@gmail.com</a> | 
+            Phone: <a href="tel:+48793188492">+48 793 188 492</a> | 
+            LinkedIn: <a href="https://www.linkedin.com/in/fadzai-chitsinde-569631359/" target="_blank">LinkedIn</a>
+        </p>
+    </div>
+
+<script>
+    // Reset the contact form when the page loads
+    window.addEventListener('load', function() {
+        const form = document.querySelector('.contact-form form');
+        if (form) form.reset();
+    });
+</script>
+
+
+</body>
+</html>
+
