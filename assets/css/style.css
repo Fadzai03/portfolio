@@ -126,32 +126,79 @@ a:hover {
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
 }
 
-/*-----------------------------------------
-  FLOATING CONTACT BAR
-------------------------------------------*/
-.floating-contact {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(13, 13, 13, 0.95);
+.mega-footer {
+    background-color: #0d0d0d;
     color: #fff;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 16px;
-    z-index: 100;
-    box-shadow: 0 -3px 10px rgba(0,0,0,0.5);
+    padding: 50px 20px 20px 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.floating-contact a {
-    color: #fff;
-    text-decoration: underline;
-    margin: 0 5px;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-.floating-contact a:hover {
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: #00aced; /* Accent color */
+    margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column a,
+.footer-column ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.footer-column a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
     color: #00aced;
 }
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    color: #00aced;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+.footer-column img {
+    width: 20px;
+    height: 20px;
+}
+
 
 /*-----------------------------------------
   ABOUT SECTION
