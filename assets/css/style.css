@@ -373,75 +373,114 @@ a:hover {
 }
 
 /*-----------------------------------------
-  PROJECTS PAGE
+  PROJECTS SECTION
 ------------------------------------------*/
 .projects {
-    padding: 120px 50px;
-    background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
-    color: #fff;
-    min-height: 100vh;
+    padding: 100px 40px;
+    background: #0d0d0d;
 }
 
 .projects h1 {
     text-align: center;
     font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.projects-intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 60px;
-    color: #ccc;
-    font-size: 18px;
+    margin-bottom: 60px;
 }
 
 .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .project-card {
-    flex: 1 1 300px;
-    max-width: 600px;
-    background: #111;
-    border-radius: 22px;
-    padding: 40px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    position: relative;
+    background: #151515;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.project-card h2 {
-    font-size: 32px;
-    margin-bottom: 5px;
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-.project-tag {
-    font-size: 14px;
-    color: #00aced;
+.project-card p {
+    color: #bbb;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.project-description {
-    color: #ddd;
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 25px;
-    line-height: 1.6;
 }
 
-.project-features li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+.project-tags span {
+    background: #222;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #aaa;
 }
 
-.project-features li::before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: #00aced;
+.project-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
+
+/*-----------------------------------------
+  CTA BUTTONS (GLOBAL)
+------------------------------------------*/
+.cta-button {
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cta-button.primary {
+    background: #ffffff;
+    color: #000;
+}
+
+.cta-button.outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/*-----------------------------------------
+  MOBILE-FIRST CTA IMPROVEMENTS
+------------------------------------------*/
+@media (max-width: 768px) {
+    .project-cta {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .projects {
+        padding: 80px 20px;
+    }
+}
+
 
 /*-----------------------------------------
   RESPONSIVE MEDIA QUERIES
